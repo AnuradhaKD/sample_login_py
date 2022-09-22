@@ -5,6 +5,7 @@ import json
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
 import requests
+
 help_str = '''
 ScreenManager:
     WelcomeScreen:
@@ -181,7 +182,7 @@ sm.add_widget(SignupScreen(name = 'signupscreen'))
 class LoginApp(MDApp):
     def build(self):
         self.strng = Builder.load_string(help_str)
-        self.url  = "https://loginsetup-14858.firebaseio.com/.json"
+        self.url  = "https://samplelogin-akd47-default-rtdb.asia-southeast1.firebasedatabase.app/.json"
         return self.strng
 
     def signup(self):
