@@ -172,6 +172,7 @@ class LoginScreen(Screen):
     pass
 class SignupScreen(Screen):
     pass
+
 sm = ScreenManager()
 sm.add_widget(WelcomeScreen(name = 'loginscreen'))
 sm.add_widget(MainScreen(name = 'mainscreen'))
@@ -206,7 +207,8 @@ class LoginApp(MDApp):
             print((to_database))
             requests.patch(url = self.url,json = to_database)
             self.strng.get_screen('loginscreen').manager.current = 'loginscreen'
-    auth = '0QjlZHsBsviGEbNRPNPdMZwq5UDBI1B0qdg9Ogvd'
+            
+    auth = 'uG0C1dRiaH510djH8bOVIaxB1CnyGh0UId4fHLAP'
 
     def login(self):
         loginEmail = self.strng.get_screen('loginscreen').ids.login_email.text
